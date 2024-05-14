@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="lv">
     <head> 
-        <title>Sākums</title> 
+        <title>Anatomija</title> 
         <style> 
             h1{text-align: center;} 
         </style> 
@@ -64,18 +64,61 @@
 </script>
 <title>kolokvijiem</title>
 <link rel="stylesheet" href="styles.css">
-<body> 
-        <h1><span style="font-weight: bold;">Gatavošanās kolokvijiem un eksāmeniem.</span></h1> 
-    </body> 
+<h1>Randomizeri par dažādām tēmām</h1>
 <br>
+<br>
+<title>Collapsible Button</title>
+<style>
+  /* Style the button */
+  .collapsible {
+    background-color: #f2b04db3;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 18px;
+    width: 30%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+
+  /* Style the content that is hidden by default */
+  .special-element {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color:bisque;
+  }
+
+  /* Add a pointer (hover effect) on the "Details" button */
+  .collapsible:hover {
+    background-color: #f8d86e;
+  }
+</style>
+</head>
 <body>
-    <h2><span style="font-weight: bold;">Dažādi noderīgi linki (construction in progress)</span></h2>
-    <h3>Possibly pdf to word</h3>
-    <nav>
-        <ul>
-            <lin><h2><span style="font-weight: bold;"><a href="randomizeri.html">Randomizeri</a></span></h2></lin>
-            <lin><h2><span style="font-weight: bold;"><a href="pacman.html">Spēlīte studentiem</a></span></h2></lin>
-        </ul>
-    </nav>
-</body>    
+
+<!-- Button to toggle the collapsible content -->
+<button class="collapsible" onclick="toggleCollapsible()">Anatomija</button>
+
+<!-- The collapsible content -->
+<div class="special-element" id="collapsibleContent">
+  <nav>
+    <ul>
+        <lin><span style="font-weight: bold;"><a href="randomizer_anatomija_organi.html">Orgāni</a></span></lin>
+    </ul>
+</nav>
+</div>
+
+<script>
+function toggleCollapsible() {
+  var content = document.getElementById("collapsibleContent");
+  if (content.style.display === "block") {
+    content.style.display = "none";
+  } else {
+    content.style.display = "block";
+  }
+}
+</script>
+</body>
 </html>

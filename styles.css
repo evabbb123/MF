@@ -1,0 +1,88 @@
+*{
+    font-family:'Times New Roman';
+    font-weight: 500;
+}
+body{
+    background-color: bisque;
+}
+body {
+    margin: 5;
+    padding: 0;
+    font-family: 'Times New Roman';
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Initial position off the screen */
+    width: 300px;
+    height: 100vh;
+    background: #f3b369ef;
+    color: white;
+    transition: left 0.15s ease;
+    z-index: 1; /* Ensure sidebar is above other content */
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+}
+
+.content {
+    padding: 20px;
+}
+
+.stripes-container {
+    position:relative;
+    z-index: 2; /* Ensure stripes are above sidebar */
+    cursor: pointer;
+    width: 30px; /* Width of the extended clickable area */
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px; /* Ensure stripes are visible */
+    top: 20px; /* Adjusted position for lower stripes */
+}
+
+.stripe {
+    width: 30px;
+    height: 3px;
+    background: rgb(222, 85, 6); /* Changed stripe color to red */
+    transition: left 0.3s ease;
+}
+
+.stripe:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.stripe.middle {
+    top: 7px;
+}
+
+.stripe.bottom {
+    top: 14px;
+}
+
+
+
+/* Link styles */
+a {
+    color: #211212;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Additional styles for positioning stripes */
+.stripes-container.expanded {
+    top: 0; /* Adjusted position for top stripes */
+    left: calc(100% - -250px); /* Move to the right side of the sidebar */
+    padding-left: 0; /* Adjust padding to align stripes */
+    width: auto; /* Allow width to adjust */
+    height: auto; /* Allow height to adjust */
+    transform: translateX(-100%); /* Move container outside the viewport */
+    padding-top: 20px; /* Adjust padding to center vertically */
+}
+.expanded-sidebar-body {
+    overflow:visible;
+}
