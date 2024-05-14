@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="lv">
+    <head> 
+        <title>Histoloģija</title> 
+        <style> 
+            h1{text-align: center;} 
+        </style> 
+    </head> 
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsible Content</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<div class="stripes-container" onclick="toggleSidebar()">
+    <div class="stripe" id="top-stripe"></div>
+    <div class="stripe middle" id="middle-stripe"></div>
+    <div class="stripe bottom" id="bottom-stripe"></div>
+</div>
+
+<div class="sidebar" id="sidebar">
+    <div class="content">
+        <!-- Your content here -->
+        <br>
+        <br>
+        <a href="index.html">Sākums</a>
+        <br>
+        <a href="anatomija.html">Anatomijas kolokvijiem</a>
+        <br>
+        <a href="histologija.html">Histoloģijas kolokvijiem</a>
+        <br>
+        <a href="randomizeri.html">Randomizeri</a>
+    </div>
+</div>
+<style>
+    /* Style for the button */
+    #random-terms-container button {
+        margin-left: 40px; /* Adjust margin as needed */
+        margin-top: 10px; /* Add top margin to create space */
+        padding: 10px 20px; /* Add padding to increase button size */
+        font-size: 24px; /*size of font*/
+        background-color: #007bff; /* Default background color */
+        color: #ffffff; /* Default text color */
+        border: none;
+        cursor: pointer;
+    }    
+    /* Style for the randomized terms container */
+    #random-terms-container #random-terms {
+        margin-left: 20px; /* Adjust margin as needed */
+        margin-top: 10px; /* Add top margin to create space */
+    }
+</style>
+<script>
+    var sidebar = document.getElementById('sidebar');
+    var stripesContainer = document.querySelector('.stripes-container');
+    var topStripe = document.getElementById('top-stripe');
+    var middleStripe = document.getElementById('middle-stripe');
+    var bottomStripe = document.getElementById('bottom-stripe');
+
+    var isCollapsed = true;
+
+    function toggleSidebar() {
+        if (isCollapsed) {
+            sidebar.style.left = '0';
+            isCollapsed = false;
+        } else {
+            sidebar.style.left = '-300px';
+            isCollapsed = true;
+        }
+        topStripe.classList.toggle('collapsed');
+        middleStripe.classList.toggle('collapsed');
+        bottomStripe.classList.toggle('collapsed');
+        
+        // Toggle expanded class on stripes container
+        stripesContainer.classList.toggle('expanded', !isCollapsed);
+    }
+    
+</script>
+    <title>Randomized Terms</title>
+    <script>
+        // Define an array of terms
+        var terms = [
+
+        "Glandula submandibularis",
+        "Glandula sublingualis",
+        "Glandula parotidea",
+        "Ductus parotideus",
+        "Vallecula epiglottica",
+        "Tonsilla lingualis",
+        "Palatum durum",
+        "Palatum molle, velum palatinum",
+        "Uvula",
+        "Arcus palatoglossus",
+        "Arcus palatopharyngeus",
+        "Tonsilla palatina",
+        "Pars nasalis pharyngis",
+        "Fornix pharyngis",
+        "Tonsilla pharyngealis",
+        "Ostium pharyngeum tubae auditivae",
+        "Pars oralis pharyngis",
+        "Pars laryngea pharyngis",
+        "Aditus laryngis",
+        "Ostium oesophageum",
+        "Oesophagus",
+        "Curvatura major",
+        "Curvatura minor",
+        "Ostium cardiacum",
+        "Pars cardiaca",
+        "Fundus gastricus",
+        "Corpus gastricum",
+        "Pars pylorica",
+        "Ostium pyloricum",
+        "Plicae gastricae",
+        "M. sphincter pyloricus",
+        "Plicae circulares",
+        "Pars superior duodeni",
+        "Pars descendens duodeni",
+        "Papilla duodeni major",
+        "Pars horizontalis, pars ascendens duodeni",
+        "Flexura duodenojejunalis",
+        "Ostium ileale",
+        "Haustrae coli",
+        "Plicae semilunares",
+        "Appendices omentales",
+        "Taenia omentalis",
+        "Ampulla recti",
+        "Canalis analis",
+        "Anus",
+        "Hepar (facies diaphragmatica, facies visceralis)",
+        "Area nuda",
+        "Lig. falciforme hepatis",
+        "Fossa vesicae biliaris",
+        "Sulcus v. cavae, v. cava inferior",
+        "Porta hepatis",
+        "Ductus hepaticus communis",
+        "V. portae, a. hepatica propria",
+        "Vesica biliaris (fundus, corpus, collum vesicae biliaris)",
+        "Ductus cysticus",
+        "Ductus choledochus",
+        "Caput pancreatis",
+        "Corpus et cauda pancreatis",
+        "Excavatio rectouterina",
+        "Excavatio vesicouterina",
+        "Excavatio rectovesicalis",
+        "Splen (facies diaphragmatica, visceralis)",
+        "Hilum splenicum",
+        "Auricula dextra, sinistra",
+        "Sulcus interventricularis anterior, posterior",
+        "Sulcus coronarius",
+        "Apex cordis",
+        "Ostium venae cavae superioris",
+        "Ostium venae cavae inferioris",
+        "Ostium sinus coronarii",
+        "Fossa ovalis, limbus fossae ovalis",
+        "Mm. pectinati",
+        "Ostium atrioventriculare dextrum, sinistrum",
+        "Ostium trunci pulmonalis",
+        "Ostium aortae",
+        "Valva tricuspidalis",
+        "Conus arteriosus",
+        "Truncus pulmonalis",
+        "Valva trunci pulmonalis",
+        "Musculi papillares",
+        "Valva aortae",
+        "Valva atrioventricularis sinistra s. mitralis",
+        "Ostia venarum pulmonalium",
+        "Vv. pulmonales",
+        "Cavitas nasi",
+        "Concha nasalis superior",
+        "Concha nasalis media",
+        "Concha nasalis inferior",
+        "Meatus nasi medius",
+        "Meatus nasi inferior",
+        "Meatus nasopharyngeus",
+        "Pars olfactoria, respiratoria",
+        "Choanae",
+        "Sinus frontalis, sphenodalis, maxillaris",
+        "Membrana thyrohyoidea",
+        "Lig. cricothyroideum medianum",
+        "Lig. cricotracheale",
+        "Art. cricothyroidea",
+        "Art. cricoarytenoidea",
+        "Aditus laryngis",
+        "Vestibulum laryngis",
+        "Plica aryepiglottica",
+        "Plica vocalis, rima vocalis",
+        "M. vocalis, m. cricothyroideus",
+        "Plica vestibularis, rima vestibuli",
+        "Glottis, ventriculus laryngis",
+        "Cavitas infraglottica",
+        "Bifurcatio tracheae",
+        "Bronchus principalis dexter et sinister",
+        "Basis pulmonis",
+        "Apex pulmonis",
+        "Facies costalis pulmonis (pars vertebralis)",
+        "Facies mediastinalis pulmonis",
+        "Facies diaphragmatica pulmonis",
+        "Margo anterior pulmonis",
+        "Margo inferior pulmonis",
+        "Hilum pulmonis",
+        "Radix pulmonis",
+        "Recessus costodiaphragmaticus",
+        "Mediastinum superius",
+        "Mediastinum posterius",
+        "Hilum renale",
+        "Cortex renalis",
+        "Pyramis renalis",
+        "Papilla renalis",
+        "Columnae renales",
+        "Sinus renalis",
+        "Pelvis renis",
+        "Calyx renalis major",
+        "Calyx renalis minor",
+        "Ureter (dexter, sinister)",
+        "Fundus vesicae",
+        "Testis",
+        "Epididymis",
+        "Ductus deferens, ampulla ductus deferentis",
+        "Vesicula seminalis",
+        "Ductus ejaculatorius",
+        "Funiculus spermaticus",
+        "Prostata (basis, apex prostatae)",
+        "Radix, corpus, glans penis",
+        "Corpora cavernosa penis",
+        "Corpus spongiosus penis",
+        "Pars spongiosa urethrae, fossa navicularis urethrae",
+        "Pars prostatica, pars membranacea urethrae",
+        "Ostium urethrae externum",
+        "Scrotum",
+        "M. ischiocavernosus",
+        "M. bulbospongiosus",
+        "M. levator ani",
+        "M. sphincter ani externus",
+        "M. transversus perinei profundus",
+        "Ovarium",
+        "Extremitas tubaria, uterina",
+        "Lig. ovarii proprium",
+        "Lig. suspensorium ovarii",
+        "Tuba uterina",
+        "Infundibulum tubae uterinae",
+        "Corpus uteri",
+        "Fundus uteri",
+        "Cervix uteri (portio vaginalis, supravaginalis cervicis)",
+        "Ostium uteri",
+        "Cavitas uteri",
+        "Canalis cervicis uteri, plicae palmatae",
+        "Lig. latum uteri",
+        "Lig. teres uteri",
+        "Vagina, rugae vaginales",
+        "Fornix vaginae, pars posterior, anterior, laterales",
+        "Labia majora pudendi",
+        "Labia minora pudendi",
+        "Vestibulum vaginae",
+        "Clitoris (crura, corpus, glans clitoridis)",
+        "Ostium vaginae",
+        "Ostium urethrae externum",
+        "Vestibulum oris",
+        "Frenulum labii superioris, inferioris",
+        "Dorsum linguae",
+        "Apex, corpus, radix linguae",
+        "Plica glossoepiglotica mediana",
+        "Plica glossoepiglotica lateralis",
+        "Fossa tonsillaris",
+        "Torus tubarius",
+        "Recessus pharyngeus",
+        "Incisura angularis",
+        "Incisura cardialis",
+        "Antrum pyloricum",
+        "Canalis pyloricus",
+        "Jejunum",
+        "Ileum",
+        "Caecum",
+        "Appendix vermiformis",
+        "Colon ascendens",
+        "Flexura coli dextra",
+        "Colon transversum",
+        "Flexura coli sinistra",
+        "Colon descendens",
+        "Colon sigmoideum",
+        "Rectum",
+        "Columnae anales, sinus anales",
+        "Lig. coronarium hepatis",
+        "Mesenterium intestinale",
+        "Mesocolon transversum",
+        "Recessus subphrenicus",
+        "Recessus subhepaticus",
+        "Facies pulmonalis",
+        "Facies sternocostalis",
+        "Facies diaphragmatica",
+        "Margo dexter cordis",
+        "Sinus venarum cavarum",
+        "Septum interventriculare",
+        "Radix, dorsum, apex, alae nasi",
+        "Nares",
+        "Vestibulum nasi",
+        "Cartilago thyroidea",
+        "Cartilago cricoidea",
+        "Cartilago arytenoidea",
+        "Epiglottis",
+        "Lig. vocale",
+        "Cartilagines tracheales",
+        "Ligg. anularia tracheae",
+        "Paries membranaceus tracheae",
+        "Lingula pulmonis sinistri",
+        "Incisura cardiaca pulmonis sinistri",
+        "Margo lateralis, medialis renis",
+        "Sulcus dorsalis, urethralis penis",
+        "Ampulla tubae uterinae",
+        "Isthmus tubae uterinae",
+        "Facies vesicalis, intestinalis uteri",
+        "Sulcus nasolabialis",
+        "Philtrum",
+        "Sulcus mentolabialis",
+        "Corona dentis",
+        "Radix dentis",
+        "Cervix dentis",
+        "Dentes incisivi",
+        "Dentes canini",
+        "Dentes premolares",
+        "Dentes molares",
+        "Papillae fungiformes",
+        "Papillae vallatae",
+        "Papillae foliatae",
+        "Frenulum linguae",
+        "Recessus piriformis",
+        "Plicae transversae recti",
+        "Margo inferior hepatis",
+        "Lobus dexter hepatis",
+        "Lobus sinister hepatis",
+        "Lobus quadratus",
+        "Lobus caudatus",
+        "Fissura lig. teretis",
+        "Lig. teres hepatis",
+        "Fissura lig. venosi",
+        "Omentum majus",
+        "Foramen omentale",
+        "Recessus ileocaecalis superior, inferior",
+        "Recessus duodenojejunalis",
+        "Trabeculae carneae",
+        "Chordae tendineae",
+        "Lobus superior pulmonis (dextri, sinistri)",
+        "Lobus medius pulmonis dextri",
+        "Lobus inferior pulmonis (dextri, sinistri)",
+        "Fissura obliqua pulmonis",
+        "Fissura horizontalis pulmonis dextri",
+        "Apex vesicae",
+        "Corpus vesicae",
+        "Plica interureterica, plicae vesicales",
+
+            // Add more terms as needed
+        ];
+
+        // Function to shuffle array elements (Fisher-Yates shuffle algorithm)
+        function shuffle(array) {
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+            return array;
+        }
+
+        // Function to display random terms
+        function displayRandomTerms() {
+            var shuffledTerms = shuffle(terms);
+            var output = "<ul>";
+            for (var i = 0; i < 10; i++) {
+                output += "<li>" + shuffledTerms[i] + "</li>";
+            }
+            output += "</ul>";
+            document.getElementById("random-terms").innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    <h1>Orgāniņi</h1>
+    <button onclick="displayRandomTerms()"><h3>Saņemies un mācies</h3></button>
+    <div id="random-terms"></div>
+</body>
+<title>kolokvijiem</title>
+<link rel="stylesheet" href="styles.css">
+</html>

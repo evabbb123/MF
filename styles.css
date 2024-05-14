@@ -1,5 +1,5 @@
 *{
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Times New Roman';
     font-weight: 500;
 }
 body{
@@ -18,7 +18,7 @@ body {
     left: -300px; /* Initial position off the screen */
     width: 300px;
     height: 100vh;
-    background: #f5b368ef;
+    background: #f3b369ef;
     color: white;
     transition: left 0.15s ease;
     z-index: 1; /* Ensure sidebar is above other content */
